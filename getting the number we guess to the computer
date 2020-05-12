@@ -1,0 +1,20 @@
+import random
+print("Let's Keep a Number on Your Mind(1-100)\n If i Guess Right Enter '0' \nIf The Number You Hold is Greater Than My Guess Enter'1' \n If it is Small Enter '2'.")
+pc_guess=int(random.randint(0,100))
+print("Can Your Number is",pc_guess,"?")
+min_value=-1
+max_value=101
+my_value=int(input("0 or 1 or 2:" ))
+while my_value!=0:
+    if my_value==1:
+        min_value=pc_guess
+        pc_guess=int(random.randint(min_value+1,max_value-1))
+        print(pc_guess)
+        my_value=int(input("0 or 1 or 2:" ))
+    elif my_value==2:
+        max_value=pc_guess
+        pc_guess=int(random.randint(min_value+1,max_value-1))
+        print(pc_guess)
+        my_value=int(input("0 or 1 or 2:" ))
+if my_value==0:
+    print("Yes! I found!")
