@@ -1,0 +1,11 @@
+import random
+value=random.randint(0,100)
+guess=int(input("Your Guess: "))
+while value != guess:  
+    if value<guess:
+        print("Please Enter a Smaller Number.")
+        guess=int(input("Your Guess: "))
+    elif value>tahmin:
+        print("Please Enter a Bigger Number.")
+        guess=int(input("Your Guess: "))   
+print("CONGRATULATIONS you guessed right.")
